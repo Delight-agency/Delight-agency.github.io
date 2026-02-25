@@ -1,125 +1,235 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delight Agency - Marketing Tools for Lasting Growth</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    header {
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .section {
+      padding: 5rem 0;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .price {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #10b981;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      background: #10b981;
+      color: white;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s;
+      font-size: 1.2rem;
+      margin: 1.5rem auto 0;
+      max-width: 220px;
+    }
+    .btn:hover {
+      background: #059669;
+    }
+    .popular {
+      border: 4px solid #6366f1;
+      position: relative;
+      transform: scale(1.05);
+    }
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #fbbf24;
+      color: #4f46e5;
+      font-weight: bold;
+      padding: 0.5rem 1.5rem;
+      border-bottom-left-radius: 1rem;
+    }
+    ul.checks {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    ul.checks li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    ul.checks li span {
+      color: #10b981;
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+      line-height: 1.2;
+    }
+    .payment-note {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin: 2rem 0 4rem;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
+<body>
 
-  <!-- Hero -->
-  <header class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white">
-    <div class="container mx-auto px-6 py-28 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Delight Agency</h1>
-      <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Timeless marketing tools, swipe files & templates to build real, lasting results</p>
-      <a href="#pricing" class="inline-block bg-white text-indigo-800 font-bold py-4 px-10 rounded-full shadow-xl hover:bg-gray-100 transition text-lg">View Packages →</a>
+  <header>
+    <div class="container">
+      <h1>Delight Agency</h1>
+      <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto 2rem;">
+        Timeless marketing tools to build real, lasting results
+      </p>
+      <a href="#pricing" class="btn" style="background:white; color:#4f46e5; display:inline-block;">
+        View Packages
+      </a>
     </div>
   </header>
 
-  <!-- Delight Legacy -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-indigo-800 mb-6">Delight Legacy</h2>
-      <p class="text-xl font-semibold text-gray-700 mb-8">Marketing Built to Last</p>
-      <div class="prose prose-lg mx-auto text-left">
-        <p>Delight Legacy is our promise: tools that go beyond quick wins. We create swipe files, Notion setups, and strategies designed for long-term growth, brand strength, and compounding results.</p>
-        <p>Whether you're in Warri or worldwide, these resources help you build influence that endures — turning effort today into legacy tomorrow.</p>
-      </div>
-      <ul class="mt-8 text-left max-w-xl mx-auto space-y-3 text-gray-700">
-        <li class="flex items-start"><span class="text-green-600 mr-3">✓</span> Evergreen swipe files that work year after year</li>
-        <li class="flex items-start"><span class="text-green-600 mr-3">✓</span> Scalable Notion dashboards for growing teams</li>
-        <li class="flex items-start"><span class="text-green-600 mr-3">✓</span> Instant digital delivery — no waiting</li>
+  <section class="section" style="background:white;">
+    <div class="container text-center">
+      <h2 style="font-size: 3rem; font-weight: 800; color:#4f46e5; margin-bottom: 1rem;">
+        Delight Legacy
+      </h2>
+      <p style="font-size: 1.4rem; font-weight: 600; color:#4b5563; margin-bottom: 1.5rem;">
+        Marketing Built to Last
+      </p>
+      <p style="max-width: 800px; margin: 0 auto 1.5rem;">
+        Delight Legacy is our promise: tools that go beyond quick wins — designed for long-term growth and compounding results.
+      </p>
+      <ul class="checks" style="max-width: 700px; margin: 2rem auto; text-align: left;">
+        <li><span>✓</span> Evergreen swipe files that work year after year</li>
+        <li><span>✓</span> Scalable systems for growing teams</li>
+        <li><span>✓</span> Instant digital delivery</li>
       </ul>
     </div>
   </section>
 
-  <!-- Pricing Packages Section -->
-  <section id="pricing" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Choose Your Package</h2>
-      <p class="text-xl text-center text-gray-600 mb-12">Get full access to our complete suite of powerful marketing tools</p>
-      
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <section id="pricing" class="section" style="background:#f9fafb;">
+    <div class="container">
+      <h2 style="font-size: 3rem; font-weight: 800; text-align:center; margin-bottom: 1rem;">
+        Choose Your Package
+      </h2>
+      <p style="text-align:center; font-size: 1.3rem; color:#4b5563; margin-bottom: 1rem;">
+        Full access to our complete suite of 10 powerful marketing tools
+      </p>
+      <p class="payment-note">
+        Secure payment via Flutterwave • Instant access after successful payment
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
 
         <!-- Basic Package -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition hover:-translate-y-2">
-          <div class="p-8 text-center">
-            <h3 class="text-3xl font-bold mb-2">Basic</h3>
-            <p class="text-gray-600 mb-6">Essential tools to get started</p>
-            <div class="text-5xl font-extrabold text-green-600 mb-8">$100</div>
-            <ul class="text-left space-y-4 mb-10">
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Technical SEO</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Customer Relation Management</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Backlinking</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Social Media Analyzer</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Influencer Outreach System</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Audience Insights Hub</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Email Automation Hub</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Keyword Research Engine</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Backlink Audit System</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Digital Optimization Lab</li>
+        <div class="card">
+          <div style="text-align:center;">
+            <h3 style="font-size: 2.2rem; font-weight: 700;">Basic</h3>
+            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Essential tools to get started</p>
+            <div class="price">$100</div>
+            <ul class="checks">
+              <li><span>✓</span>Technical SEO</li>
+              <li><span>✓</span>Customer Relation Management</li>
+              <li><span>✓</span>Backlinking</li>
+              <li><span>✓</span>Social Media Analyzer</li>
+              <li><span>✓</span>Influencer Outreach System</li>
+              <li><span>✓</span>Audience Insights Hub</li>
+              <li><span>✓</span>Email Automation Hub</li>
+              <li><span>✓</span>Keyword Research Engine</li>
+              <li><span>✓</span>Backlink Audit System</li>
+              <li><span>✓</span>Digital Optimization Lab</li>
             </ul>
-          href="https://flutterwave.com/pay/3yragr51jyvw" class="btn">Get Basic</a>
-
+            <a href="https://flutterwave.com/pay/3yragr51jyvw" class="btn">Get Basic</a>
+          </div>
         </div>
 
-        <!-- Standard Package (highlighted) -->
-        <div class="bg-indigo-700 text-white rounded-2xl shadow-2xl overflow-hidden border-4 border-indigo-500 relative transform scale-105">
-          <div class="absolute top-0 right-0 bg-yellow-400 text-indigo-900 font-bold px-6 py-2 rounded-bl-xl">Most Popular</div>
-          <div class="p-8 text-center">
-            <h3 class="text-3xl font-bold mb-2">Standard</h3>
-            <p class="text-indigo-200 mb-6">Full access with priority support</p>
-            <div class="text-5xl font-extrabold mb-8">$150</div>
-            <ul class="text-left space-y-4 mb-10">
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Technical SEO</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Customer Relation Management</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Backlinking</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Social Media Analyzer</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Influencer Outreach System</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Audience Insights Hub</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Email Automation Hub</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Keyword Research Engine</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Backlink Audit System</li>
-              <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span>Digital Optimization Lab</li>
+        <!-- Standard Package -->
+        <div class="card popular">
+          <div class="badge">Most Popular</div>
+          <div style="text-align:center;">
+            <h3 style="font-size: 2.2rem; font-weight: 700;">Standard</h3>
+            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Full access with priority support</p>
+            <div class="price" style="color:#10b981;">$150</div>
+            <ul class="checks">
+              <li><span>✓</span>Technical SEO</li>
+              <li><span>✓</span>Customer Relation Management</li>
+              <li><span>✓</span>Backlinking</li>
+              <li><span>✓</span>Social Media Analyzer</li>
+              <li><span>✓</span>Influencer Outreach System</li>
+              <li><span>✓</span>Audience Insights Hub</li>
+              <li><span>✓</span>Email Automation Hub</li>
+              <li><span>✓</span>Keyword Research Engine</li>
+              <li><span>✓</span>Backlink Audit System</li>
+              <li><span>✓</span>Digital Optimization Lab</li>
             </ul>
-            <a href="YOUR_STANDARD_PACKAGE_PAYMENT_LINK_HERE" class="block bg-white text-indigo-700 font-bold py-4 px-8 rounded-xl text-center hover:bg-gray-100 transition">Get Standard →</a>
+            <a href="https://flutterwave.com/pay/tyywwhqjdpsx" class="btn" style="background:#ffffff; color:#4f46e5; border:2px solid #4f46e5;">Get Standard</a>
           </div>
         </div>
 
         <!-- Premium Package -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition hover:-translate-y-2">
-          <div class="p-8 text-center">
-            <h3 class="text-3xl font-bold mb-2">Premium</h3>
-            <p class="text-gray-600 mb-6">Everything + exclusive updates & consulting</p>
-            <div class="text-5xl font-extrabold text-green-600 mb-8">$200</div>
-            <ul class="text-left space-y-4 mb-10">
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Technical SEO</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Customer Relation Management</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Backlinking</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Social Media Analyzer</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Influencer Outreach System</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Audience Insights Hub</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Email Automation Hub</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Keyword Research Engine</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Backlink Audit System</li>
-              <li class="flex items-start"><span class="text-green-600 mr-3 text-xl">✓</span>Digital Optimization Lab</li>
+        <div class="card">
+          <div style="text-align:center;">
+            <h3 style="font-size: 2.2rem; font-weight: 700;">Premium</h3>
+            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Everything + exclusive updates & consulting</p>
+            <div class="price">$200</div>
+            <ul class="checks">
+              <li><span>✓</span>Technical SEO</li>
+              <li><span>✓</span>Customer Relation Management</li>
+              <li><span>✓</span>Backlinking</li>
+              <li><span>✓</span>Social Media Analyzer</li>
+              <li><span>✓</span>Influencer Outreach System</li>
+              <li><span>✓</span>Audience Insights Hub</li>
+              <li><span>✓</span>Email Automation Hub</li>
+              <li><span>✓</span>Keyword Research Engine</li>
+              <li><span>✓</span>Backlink Audit System</li>
+              <li><span>✓</span>Digital Optimization Lab</li>
             </ul>
-<a href="https://flutterwave.com/pay/xkafol7p0eck" class="btn">Get Premium</a>
+            <a href="https://flutterwave.com/pay/xkafol7p0eck" class="btn">Get Premium</a>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-indigo-900 text-white py-12 text-center">
-    <p class="text-lg">© 2026 Delight Agency | Warri, Delta, Nigeria</p>
-    <p class="mt-2 text-sm opacity-80">Instant access • Secure payments • Built for lasting marketing impact</p>
+  <footer style="background:#1e3a8a; color:white; text-align:center; padding: 3rem 1rem;">
+    <p style="font-size: 1.2rem;">© 2026 Delight Agency | Warri, Delta, Nigeria</p>
+    <p style="margin-top: 0.5rem; opacity: 0.9;">
+      Instant access • Secure payments via Flutterwave • Built for lasting marketing impact
+    </p>
   </footer>
 
 </body>
