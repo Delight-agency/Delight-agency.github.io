@@ -3,107 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delight Agency - Marketing Tools for Lasting Growth</title>
+  <title>Delight Agency - Advanced Marketing & Tech Tools</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #6366f1;       /* Indigo for tech feel */
+      --primary-dark: #4f46e5;
+      --accent: #a78bfa;        /* Purple accent */
+      --success: #10b981;
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --text-light: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f9fafb;
-      color: #111827;
+      background: var(--bg-dark);
+      color: var(--text-light);
       line-height: 1.6;
     }
     .container {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
     header {
-      background: linear-gradient(to right, #4f46e5, #7c3aed);
-      color: white;
+      background: linear-gradient(135deg, #1e3a8a 0%, #312e81 50%, #4338ca 100%);
+      padding: 8rem 1rem 6rem;
       text-align: center;
-      padding: 6rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; right: -50%; bottom: -50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 60%);
+      animation: pulse 15s infinite alternate;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      100% { transform: scale(1.5); opacity: 0.1; }
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
+      background: linear-gradient(to right, #c7d2fe, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(99,102,241,0.3);
+    }
+    .btn:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(167,139,250,0.4);
     }
     .section {
-      padding: 5rem 0;
+      padding: 6rem 0;
     }
     .card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      padding: 2rem;
-      transition: all 0.3s;
+      background: var(--bg-card);
+      border-radius: 1.25rem;
+      border: 1px solid #334155;
+      padding: 2.5rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      transform: translateY(-12px);
+      border-color: var(--primary);
+      box-shadow: 0 25px 50px -12px rgba(99,102,241,0.25);
+    }
+    .popular {
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(167,139,250,0.2);
+    }
+    .badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: var(--accent);
+      color: #1e293b;
+      font-weight: 700;
+      padding: 0.4rem 1.2rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
     }
     .price {
       font-size: 3.5rem;
       font-weight: 800;
-      color: #10b981;
-      margin: 1.5rem 0;
+      color: var(--success);
       text-align: center;
-    }
-    .btn {
-      display: block;
-      background: #10b981;
-      color: white;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      border-radius: 0.75rem;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.3s;
-      font-size: 1.2rem;
-      margin: 1.5rem auto 0;
-      max-width: 220px;
-    }
-    .btn:hover {
-      background: #059669;
-    }
-    .popular {
-      border: 4px solid #6366f1;
-      position: relative;
-      transform: scale(1.05);
-    }
-    .badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #fbbf24;
-      color: #4f46e5;
-      font-weight: bold;
-      padding: 0.5rem 1.5rem;
-      border-bottom-left-radius: 1rem;
-    }
-    ul.checks {
-      list-style: none;
-      padding: 0;
       margin: 1.5rem 0;
     }
     ul.checks li {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 1rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
       font-size: 1.1rem;
+      color: var(--text-muted);
     }
     ul.checks li span {
-      color: #10b981;
-      font-size: 1.5rem;
-      margin-right: 0.75rem;
-      line-height: 1.2;
+      color: var(--success);
+      font-size: 1.6rem;
+      margin-right: 1rem;
     }
     .payment-note {
       text-align: center;
+      color: var(--text-muted);
       font-size: 1.1rem;
-      color: #4b5563;
       margin: 2rem 0 4rem;
+    }
+    footer {
+      background: #0f172a;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      border-top: 1px solid #334155;
     }
   </style>
 </head>
@@ -112,53 +146,49 @@
   <header>
     <div class="container">
       <h1>Delight Agency</h1>
-      <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto 2rem;">
-        Timeless marketing tools to build real, lasting results
+      <p class="tagline">
+        Advanced SEO, automation & analytics tools built for serious marketers and growth teams
       </p>
-      <a href="#pricing" class="btn" style="background:white; color:#4f46e5; display:inline-block;">
-        View Packages
-      </a>
+      <a href="#pricing" class="btn">Explore Packages</a>
     </div>
   </header>
 
-  <section class="section" style="background:white;">
+  <section class="section" style="background:#0f172a;">
     <div class="container text-center">
-      <h2 style="font-size: 3rem; font-weight: 800; color:#4f46e5; margin-bottom: 1rem;">
+      <h2 style="font-size: 3.2rem; font-weight: 800; color:var(--accent); margin-bottom: 1.5rem;">
         Delight Legacy
       </h2>
-      <p style="font-size: 1.4rem; font-weight: 600; color:#4b5563; margin-bottom: 1.5rem;">
-        Marketing Built to Last
+      <p style="font-size: 1.4rem; color:var(--text-muted); max-width: 800px; margin: 0 auto 2.5rem;">
+        Next-generation marketing infrastructure — not just tools, but systems engineered for compounding growth, technical precision, and long-term dominance.
       </p>
-      <p style="max-width: 800px; margin: 0 auto 1.5rem;">
-        Delight Legacy is our promise: tools that go beyond quick wins — designed for long-term growth and compounding results.
-      </p>
-      <ul class="checks" style="max-width: 700px; margin: 2rem auto; text-align: left;">
-        <li><span>✓</span> Evergreen swipe files that work year after year</li>
-        <li><span>✓</span> Scalable systems for growing teams</li>
-        <li><span>✓</span> Instant digital delivery</li>
+      <ul class="checks" style="max-width: 700px; margin: 0 auto; text-align: left; font-size: 1.15rem;">
+        <li><span>✓</span> Enterprise-grade technical SEO & backlink intelligence</li>
+        <li><span>✓</span> Full-funnel automation (email, social, influencer)</li>
+        <li><span>✓</span> Real-time audience & keyword insights</li>
+        <li><span>✓</span> Instant digital delivery + lifetime updates on select plans</li>
       </ul>
     </div>
   </section>
 
-  <section id="pricing" class="section" style="background:#f9fafb;">
+  <section id="pricing" class="section">
     <div class="container">
-      <h2 style="font-size: 3rem; font-weight: 800; text-align:center; margin-bottom: 1rem;">
-        Choose Your Package
+      <h2 style="font-size: 3.2rem; font-weight: 800; text-align:center; margin-bottom: 1rem; color:var(--text-light);">
+        Choose Your Growth Tier
       </h2>
-      <p style="text-align:center; font-size: 1.3rem; color:#4b5563; margin-bottom: 1rem;">
-        Full access to our complete suite of 10 powerful marketing tools
+      <p style="text-align:center; color:var(--text-muted); font-size: 1.3rem; margin-bottom: 1rem;">
+        Unlock the full suite of 10 powerful marketing & tech tools
       </p>
       <p class="payment-note">
-        Secure payment via Flutterwave • Instant access after successful payment
+        Secure one-time payment via Flutterwave • Instant access after confirmation
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
 
-        <!-- Basic Package -->
+        <!-- Basic -->
         <div class="card">
           <div style="text-align:center;">
-            <h3 style="font-size: 2.2rem; font-weight: 700;">Basic</h3>
-            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Essential tools to get started</p>
+            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Basic</h3>
+            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Core toolkit for starting strong</p>
             <div class="price">$100</div>
             <ul class="checks">
               <li><span>✓</span>Technical SEO</li>
@@ -176,13 +206,13 @@
           </div>
         </div>
 
-        <!-- Standard Package -->
+        <!-- Standard -->
         <div class="card popular">
           <div class="badge">Most Popular</div>
           <div style="text-align:center;">
-            <h3 style="font-size: 2.2rem; font-weight: 700;">Standard</h3>
-            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Full access with priority support</p>
-            <div class="price" style="color:#10b981;">$150</div>
+            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Standard</h3>
+            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Full power + priority updates</p>
+            <div class="price">$150</div>
             <ul class="checks">
               <li><span>✓</span>Technical SEO</li>
               <li><span>✓</span>Customer Relation Management</li>
@@ -195,15 +225,15 @@
               <li><span>✓</span>Backlink Audit System</li>
               <li><span>✓</span>Digital Optimization Lab</li>
             </ul>
-            <a href="https://flutterwave.com/pay/tyywwhqjdpsx" class="btn" style="background:#ffffff; color:#4f46e5; border:2px solid #4f46e5;">Get Standard</a>
+            <a href="https://flutterwave.com/pay/tyywwhqjdpsx" class="btn" style="background:var(--accent); box-shadow:0 10px 25px rgba(167,139,250,0.4);">Get Standard</a>
           </div>
         </div>
 
-        <!-- Premium Package -->
+        <!-- Premium -->
         <div class="card">
           <div style="text-align:center;">
-            <h3 style="font-size: 2.2rem; font-weight: 700;">Premium</h3>
-            <p style="color:#6b7280; margin: 0.5rem 0 1rem;">Everything + exclusive updates & consulting</p>
+            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Premium</h3>
+            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Elite access + exclusive consulting</p>
             <div class="price">$200</div>
             <ul class="checks">
               <li><span>✓</span>Technical SEO</li>
@@ -225,12 +255,14 @@
     </div>
   </section>
 
-  <footer style="background:#1e3a8a; color:white; text-align:center; padding: 3rem 1rem;">
-    <p style="font-size: 1.2rem;">© 2026 Delight Agency | 14 Briarwood Close  S7 3LP, Sheffield, United Kingdom</p>
-    <p style="margin-top: 0.5rem; opacity: 0.9;">
-      Instant access • Secure payments via Flutterwave • Built for lasting marketing impact
-    </p>
+  <footer>
+    <div class="container">
+      <p style="font-size: 1.2rem; margin-bottom: 1rem;">© 2026 Delight Agency | 14 Briarwood Close, S7 3LP Sheffield United Kingdom</p>
+      <p style="color:var(--text-muted);">Advanced digital marketing infrastructure • Secure Flutterwave payments • Instant delivery</p>
+    </div>
   </footer>
 
+</body>
+</html>
 </body>
 </html>
