@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delight Agency - Advanced Marketing & Tech Tools</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Delight Agency – Marketing & Tech Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #6366f1;       /* Indigo for tech feel */
-      --primary-dark: #4f46e5;
-      --accent: #a78bfa;        /* Purple accent */
-      --success: #10b981;
-      --bg-dark: #0f172a;
-      --bg-card: #1e293b;
-      --text-light: #f1f5f9;
-      --text-muted: #94a3b8;
+      --shopify-green: #00796B;
+      --shopify-green-dark: #005F56;
+      --shopify-green-light: #00A676;
+      --bg: #ffffff;
+      --text: #202223;
+      --muted: #6B7177;
+      --border: #e1e3e5;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       margin: 0;
-      background: var(--bg-dark);
-      color: var(--text-light);
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
     .container {
@@ -29,115 +29,164 @@
       padding: 0 1.5rem;
     }
     header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #312e81 50%, #4338ca 100%);
-      padding: 8rem 1rem 6rem;
+      background: linear-gradient(to bottom, #f8fafc, #ffffff);
+      padding: 3rem 0 2rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
-    header::before {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%; right: -50%; bottom: -50%;
-      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 60%);
-      animation: pulse 15s infinite alternate;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.4; }
-      100% { transform: scale(1.5); opacity: 0.1; }
-    }
-    h1 {
-      font-size: 3.8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      background: linear-gradient(to right, #c7d2fe, #a5b4fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .tagline {
-      font-size: 1.5rem;
-      color: var(--text-muted);
-      max-width: 800px;
-      margin: 0 auto 2.5rem;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
+    .logo {
+      font-size: 2.2rem;
       font-weight: 700;
-      padding: 1rem 2.5rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(99,102,241,0.3);
-    }
-    .btn:hover {
-      background: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(167,139,250,0.4);
-    }
-    .section {
-      padding: 6rem 0;
-    }
-    .card {
-      background: var(--bg-card);
-      border-radius: 1.25rem;
-      border: 1px solid #334155;
-      padding: 2.5rem;
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:hover {
-      transform: translateY(-12px);
-      border-color: var(--primary);
-      box-shadow: 0 25px 50px -12px rgba(99,102,241,0.25);
-    }
-    .popular {
-      border-color: var(--accent);
-      box-shadow: 0 20px 40px rgba(167,139,250,0.2);
-    }
-    .badge {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      background: var(--accent);
-      color: #1e293b;
-      font-weight: 700;
-      padding: 0.4rem 1.2rem;
-      border-radius: 9999px;
-      font-size: 0.9rem;
-    }
-    .price {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: var(--success);
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-    ul.checks li {
+      color: var(--shopify-green);
+      margin-bottom: 0.5rem;
       display: flex;
       align-items: center;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-      color: var(--text-muted);
+      justify-content: center;
+      gap: 0.5rem;
     }
-    ul.checks li span {
-      color: var(--success);
-      font-size: 1.6rem;
-      margin-right: 1rem;
+    .logo::before {
+      content: "🛍️";
+      font-size: 2.4rem;
     }
-    .payment-note {
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 0.5rem 0 1rem;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.8rem;
+      padding: 3rem 0;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow);
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+      border-color: var(--shopify-green-light);
+    }
+    .product-image {
+      height: 180px;
+      background: #f0f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #e0e7ff;
+    }
+    .product-content {
+      padding: 1.5rem;
+    }
+    .product-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem;
+    }
+    .product-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      min-height: 3.2em;
+    }
+    .pricing-section {
+      background: #f8fafc;
+      padding: 5rem 0 4rem;
+      border-top: 1px solid var(--border);
+    }
+    .pricing-title {
       text-align: center;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      margin: 2rem 0 4rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .price-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .price-card.popular {
+      border: 2px solid var(--shopify-green);
+      transform: scale(1.04);
+      position: relative;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--shopify-green);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .price-amount {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--shopify-green);
+      margin: 1rem 0;
+    }
+    .price-features {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 2rem;
+      text-align: left;
+    }
+    .price-features li {
+      margin-bottom: 0.9rem;
+      font-size: 1.05rem;
+    }
+    .price-features li::before {
+      content: "✔";
+      color: var(--shopify-green);
+      margin-right: 0.8rem;
+      font-weight: bold;
+    }
+    .buy-btn {
+      display: block;
+      background: var(--shopify-green);
+      color: white;
+      font-weight: 600;
+      padding: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.15rem;
+      transition: all 0.25s;
+    }
+    .buy-btn:hover {
+      background: var(--shopify-green-dark);
+      transform: translateY(-2px);
     }
     footer {
-      background: #0f172a;
-      padding: 4rem 1rem 2rem;
+      background: #f8fafc;
+      padding: 3rem 0 2rem;
       text-align: center;
-      border-top: 1px solid #334155;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -145,110 +194,139 @@
 
   <header>
     <div class="container">
-      <h1>Delight Agency</h1>
-      <p class="tagline">
-        Advanced SEO, automation & analytics tools built for serious marketers and growth teams
-      </p>
-      <a href="#pricing" class="btn">Explore Packages</a>
+      <div class="logo">Delight Agency</div>
+      <h1>Professional Marketing & Tech Tools</h1>
+      <p class="tagline">Powerful, ready-to-use systems for SEO, automation, analytics, outreach and optimization – instant access</p>
     </div>
   </header>
 
-  <section class="section" style="background:#0f172a;">
-    <div class="container text-center">
-      <h2 style="font-size: 3.2rem; font-weight: 800; color:var(--accent); margin-bottom: 1.5rem;">
-        Delight Legacy
-      </h2>
-      <p style="font-size: 1.4rem; color:var(--text-muted); max-width: 800px; margin: 0 auto 2.5rem;">
-        Next-generation marketing infrastructure — not just tools, but systems engineered for compounding growth, technical precision, and long-term dominance.
-      </p>
-      <ul class="checks" style="max-width: 700px; margin: 0 auto; text-align: left; font-size: 1.15rem;">
-        <li><span>✓</span> Enterprise-grade technical SEO & backlink intelligence</li>
-        <li><span>✓</span> Full-funnel automation (email, social, influencer)</li>
-        <li><span>✓</span> Real-time audience & keyword insights</li>
-        <li><span>✓</span> Instant digital delivery + lifetime updates on select plans</li>
-      </ul>
+  <section class="container">
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-image">🔍</div>
+        <div class="product-content">
+          <h3 class="product-title">Technical SEO</h3>
+          <p class="product-desc">Site audits, speed optimization, schema markup, crawl error fixes and more.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🤝</div>
+        <div class="product-content">
+          <h3 class="product-title">Customer Relation Management</h3>
+          <p class="product-desc">CRM templates, segmentation, follow-up sequences and retention workflows.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🔗</div>
+        <div class="product-content">
+          <h3 class="product-title">Backlinking</h3>
+          <p class="product-desc">Outreach templates, guest post trackers, link building planners.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">📊</div>
+        <div class="product-content">
+          <h3 class="product-title">Social Media Analyzer</h3>
+          <p class="product-desc">Performance dashboards, competitor tracking, content gap analysis.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🌟</div>
+        <div class="product-content">
+          <h3 class="product-title">Influencer Outreach System</h3>
+          <p class="product-desc">Database templates, pitch scripts, negotiation trackers.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">👥</div>
+        <div class="product-content">
+          <h3 class="product-title">Audience Insights Hub</h3>
+          <p class="product-desc">Demographic & psychographic profiling, interest mapping tools.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">📧</div>
+        <div class="product-content">
+          <h3 class="product-title">Email Automation Hub</h3>
+          <p class="product-desc">Sequences, drip campaigns, segmentation & A/B testing setups.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🔑</div>
+        <div class="product-content">
+          <h3 class="product-title">Keyword Research Engine</h3>
+          <p class="product-desc">Opportunity scoring, clustering, SERP analysis templates.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🛡️</div>
+        <div class="product-content">
+          <h3 class="product-title">Backlink Audit System</h3>
+          <p class="product-desc">Toxic link detection, disavow file generator, anchor text analysis.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">⚙️</div>
+        <div class="product-content">
+          <h3 class="product-title">Digital Optimization Lab</h3>
+          <p class="product-desc">Conversion rate checklists, UX audits, A/B test planners.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="pricing" class="section">
+  <section class="pricing-section">
     <div class="container">
-      <h2 style="font-size: 3.2rem; font-weight: 800; text-align:center; margin-bottom: 1rem; color:var(--text-light);">
-        Choose Your Growth Tier
-      </h2>
-      <p style="text-align:center; color:var(--text-muted); font-size: 1.3rem; margin-bottom: 1rem;">
-        Unlock the full suite of 10 powerful marketing & tech tools
-      </p>
-      <p class="payment-note">
-        Secure one-time payment via Flutterwave • Instant access after confirmation
-      </p>
+      <h2 class="pricing-title">Choose Your Package</h2>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+      <div class="pricing-grid">
 
-        <!-- Basic -->
-        <div class="card">
-          <div style="text-align:center;">
-            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Basic</h3>
-            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Core toolkit for starting strong</p>
-            <div class="price">$100</div>
-            <ul class="checks">
-              <li><span>✓</span>Technical SEO</li>
-              <li><span>✓</span>Customer Relation Management</li>
-              <li><span>✓</span>Backlinking</li>
-              <li><span>✓</span>Social Media Analyzer</li>
-              <li><span>✓</span>Influencer Outreach System</li>
-              <li><span>✓</span>Audience Insights Hub</li>
-              <li><span>✓</span>Email Automation Hub</li>
-              <li><span>✓</span>Keyword Research Engine</li>
-              <li><span>✓</span>Backlink Audit System</li>
-              <li><span>✓</span>Digital Optimization Lab</li>
-            </ul>
-            <a href="https://flutterwave.com/pay/3yragr51jyvw" class="btn">Get Basic</a>
-          </div>
+        <div class="price-card">
+          <h3>Basic</h3>
+          <div class="price-amount">$100</div>
+          <ul class="price-features">
+            <li>Access to all 10 core tools</li>
+            <li>One-time payment</li>
+            <li>Instant digital download</li>
+            <li>Basic email support</li>
+          </ul>
+          <a href="https://flutterwave.com/pay/3yragr51jyvw" class="buy-btn">Get Basic – $100</a>
         </div>
 
-        <!-- Standard -->
-        <div class="card popular">
-          <div class="badge">Most Popular</div>
-          <div style="text-align:center;">
-            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Standard</h3>
-            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Full power + priority updates</p>
-            <div class="price">$150</div>
-            <ul class="checks">
-              <li><span>✓</span>Technical SEO</li>
-              <li><span>✓</span>Customer Relation Management</li>
-              <li><span>✓</span>Backlinking</li>
-              <li><span>✓</span>Social Media Analyzer</li>
-              <li><span>✓</span>Influencer Outreach System</li>
-              <li><span>✓</span>Audience Insights Hub</li>
-              <li><span>✓</span>Email Automation Hub</li>
-              <li><span>✓</span>Keyword Research Engine</li>
-              <li><span>✓</span>Backlink Audit System</li>
-              <li><span>✓</span>Digital Optimization Lab</li>
-            </ul>
-            <a href="https://flutterwave.com/pay/tyywwhqjdpsx" class="btn" style="background:var(--accent); box-shadow:0 10px 25px rgba(167,139,250,0.4);">Get Standard</a>
-          </div>
+        <div class="price-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Standard</h3>
+          <div class="price-amount">$150</div>
+          <ul class="price-features">
+            <li>Everything in Basic</li>
+            <li>Bonus templates & checklists</li>
+            <li>Priority email support</li>
+            <li>Future minor updates included</li>
+          </ul>
+          <a href="https://flutterwave.com/pay/tyywwhqjdpsx" class="buy-btn">Get Standard – $150</a>
         </div>
 
-        <!-- Premium -->
-        <div class="card">
-          <div style="text-align:center;">
-            <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem;">Premium</h3>
-            <p style="color:var(--text-muted); margin-bottom: 1.5rem;">Elite access + exclusive consulting</p>
-            <div class="price">$200</div>
-            <ul class="checks">
-              <li><span>✓</span>Technical SEO</li>
-              <li><span>✓</span>Customer Relation Management</li>
-              <li><span>✓</span>Backlinking</li>
-              <li><span>✓</span>Social Media Analyzer</li>
-              <li><span>✓</span>Influencer Outreach System</li>
-              <li><span>✓</span>Audience Insights Hub</li>
-              <li><span>✓</span>Email Automation Hub</li>
-              <li><span>✓</span>Keyword Research Engine</li>
-              <li><span>✓</span>Backlink Audit System</li>
-              <li><span>✓</span>Digital Optimization Lab</li>
-            </ul>
-            <a href="https://flutterwave.com/pay/xkafol7p0eck" class="btn">Get Premium</a>
-          </div>
+        <div class="price-card">
+          <h3>Premium</h3>
+          <div class="price-amount">$200</div>
+          <ul class="price-features">
+            <li>Everything in Standard</li>
+            <li>Exclusive advanced workflows</li>
+            <li>1-on-1 setup consultation</li>
+            <li>Lifetime updates & support</li>
+          </ul>
+          <a href="https://flutterwave.com/pay/xkafol7p0eck" class="buy-btn">Get Premium – $200</a>
         </div>
 
       </div>
@@ -257,8 +335,10 @@
 
   <footer>
     <div class="container">
-      <p style="font-size: 1.2rem; margin-bottom: 1rem;">© 2026 Delight Agency | Warri & Lagos, Nigeria</p>
-      <p style="color:var(--text-muted);">Advanced digital marketing infrastructure • Secure Flutterwave payments • Instant delivery</p>
+      <p>© 2026 Delight Agency – Built with care in Port Harcourt</p>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+        Secure payments via Flutterwave • Instant access after purchase
+      </p>
     </div>
   </footer>
 
